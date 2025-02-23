@@ -15,7 +15,9 @@ AI Adventure RPG is an interactive text-based game where you explore, fight enem
 - `go north` → Explore the northern area.
 - `go south` → Enter a battle.
 - `attack` → Attack an enemy in battle.
+- `use sword` → Use sword to increase damage.
 - `defend` → Reduce incoming damage.
+- `use armor` → Use armor to reduce incoming damage.
 - `use potion` → Heal yourself (if you have a potion).
 - `check status` → View your HP, Stamina, XP, and Gold.
 - `shop` → Visit the shop to buy items.
@@ -24,10 +26,9 @@ AI Adventure RPG is an interactive text-based game where you explore, fight enem
 ## 📦 Installation
 1. Clone this repository: git clone https://github.com/RenathaPutri/AI-Adventure-RPG.git
 2. Install dependencies: pip install -r requirements.txt
-3. Set up your Google Gemini API key in `game.py`:
-`python
-genai.configure(api_key="YOUR_GEMINI_API_KEY")`
-4. Run the game: python game.py
+3. Set up your Google Gemini API key in `.env` file:
+`GEMINI_API_KEY="YOUR_GEMINI_API_KEY"`
+4. Run the game: python AI-Adventure-RPG/AI-Adventure-RPG.py
 
 🤖 How It Works
 The game starts in a forest where you make decisions.
