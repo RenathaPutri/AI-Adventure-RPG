@@ -37,7 +37,6 @@ Gold allows you to buy upgrades from the shop.
 You gain XP and level up as you progress.
 
 🔥 Future Updates
-
 More locations and storylines.
 New enemies and bosses.
 More interactive NPCs and AI-driven dialogues.
