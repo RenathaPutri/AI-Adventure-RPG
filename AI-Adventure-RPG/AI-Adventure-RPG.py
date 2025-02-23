@@ -53,7 +53,7 @@ def battle(player, enemy):
     # type: (Player, Enemy) -> None
     print("\nYou encountered an enemy!")
     while player.curr_hp > 0 and enemy.curr_hp > 0:
-        action = input("\nDo you want to 'attack', 'use sword', 'defend', or 'use potion'? ")
+        action = input("\nDo you want to 'attack', 'use sword', 'defend', 'use armor', or 'use potion'? ")
         if action.lower() == "attack":
             if player.stamina >= 10:
                 damage = random.randint(10, player.attack_power)
@@ -74,6 +74,8 @@ def battle(player, enemy):
                 print("Not enough stamina to use sword!")
         elif action.lower() == "defend":
             print("You defend, reducing incoming damage.")
+        elif action.lower() == "use armor":
+            print("You use armor, reducing incoming damage.")
             player.inventory.remove_item("Armor")
         elif action.lower() == "use potion" and "Potion" in [item.name for item in player.inventory.get_items()]:
             player.curr_hp += 30
@@ -90,6 +92,9 @@ def battle(player, enemy):
             enemy_damage = random.randint(10, enemy.attack_power)
             if action.lower() == "defend":
                 enemy_damage //= 2
+            elif action.lower() == "use armor":
+                enemy_damage //= 4
+
             player.curr_hp -= enemy_damage
             print(f"Enemy attacks and deals {enemy_damage} damage!")
 
