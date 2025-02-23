@@ -1,9 +1,25 @@
+"""
+This file contains code for the game "AI Adventure RPG".
+
+Authors:
+1. Renatha Putri
+2. SoftwareApkDev
+"""
+
+
+# Game version: 1
+
+
+# Importing necessary libraries
+
+
 import google.generativeai as genai
 import random
+import os
+from dotenv import load_dotenv
 
-# Setup API Key (Ganti dengan API Key kamu)
-API_KEY = "YOUR_API_KEY"
-genai.configure(api_key=API_KEY)
+load_dotenv()
+genai.configure(api_key=os.environ['GEMINI_API_KEY'])
 
 def ai_response(prompt):
     model = genai.GenerativeModel("gemini-pro")
