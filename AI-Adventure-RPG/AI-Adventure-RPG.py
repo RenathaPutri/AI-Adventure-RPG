@@ -315,7 +315,7 @@ def main():
     genai.configure(api_key=os.environ['GEMINI_API_KEY'])
 
     # Gemini Generative Model
-    model: GenerativeModel = genai.GenerativeModel("gemini-pro")
+    model: GenerativeModel = genai.GenerativeModel("gemini-1.5-pro")
 
     # Saved Game Data
     game_data: SavedGameData = SavedGameData("", Player(""), Enemy(""), Shop([]))
